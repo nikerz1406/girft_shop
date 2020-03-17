@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+/web.*
+**/Models
+bin/Girft_shop.dll.config Views/Web.config
+=======
 # Prerequisites
 *.d
 
@@ -30,3 +35,4 @@
 *.exe
 *.out
 *.app
+>>>>>>> 18f235e7051d28be26e09712bf129ccca9d34922

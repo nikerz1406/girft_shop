@@ -1,0 +1,476 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+@using Girft_shop.Models;
+<!-- Hero Section Begin -->
+<section class="hero-section">
+    <div class="hero-items owl-carousel">
+        <div class="single-hero-items set-bg" data-setbg="https://cdn.nhanh.vn/cdn/store/3946/bn/sb_1583142957_1.jpg">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-5">
+
+                        <span>Bộ,lốc</span>
+                        <h1>8/3 quốc tế phụ nữ</h1>
+                        <p>
+                            Sập sàn sale đổ bộ nhân ngày Quốc tế Phụ Nữ 8/3/2020 -Nhok girft shop - nhập hàng độc lạ
+                        </p>
+                        <a href="#" class="primary-btn">Xem ngay</a>
+                    </div>
+                </div>
+                <div class="off-card">
+                    <h2>Sale <span>50%</span></h2>
+                </div>
+            </div>
+        </div>
+        <div class="single-hero-items set-bg" data-setbg="https://cdn.nhanh.vn/cdn/store/3946/bn/sb_1583142841_527.jpg">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-5">
+
+                        <span>Bộ,lốc</span>
+                        <h1>8/3 quốc tế phụ nữ</h1>
+                        <p>
+                            Sập sàn sale đổ bộ nhân ngày Quốc tế Phụ Nữ 8/3/2020 -Nhok girft shop - nhập hàng độc lạ
+                        </p>
+                        <a href="#" class="primary-btn">Xem ngay</a>
+                    </div>
+                </div>
+                <div class="off-card">
+                    <h2>Sale <span>50%</span></h2>
+                </div>
+            </div>
+        </div>
+        <div class="single-hero-items set-bg" data-setbg="https://cdn.nhanh.vn/cdn/store/3946/bn/sb_1582007706_514.png">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-5">
+
+                        <span>Bộ,lốc</span>
+                        <h1>8/3 quốc tế phụ nữ</h1>
+                        <p>
+                            Sập sàn sale đổ bộ nhân ngày Quốc tế Phụ Nữ 8/3/2020 -Nhok girft shop - nhập hàng độc lạ
+                        </p>
+                        <a href="#" class="primary-btn">Xem ngay</a>
+                    </div>
+                </div>
+                <div class="off-card">
+                    <h2>Sale <span>50%</span></h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Hero Section End -->
+<!-- Banner Section Begin -->
+<div class="banner-section spad">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="single-banner">
+                    <img src="https://cdn.nhanh.vn/cdn/store/3946/ps/20170617/img_9244_thumb_600x398.jpg" alt="">
+                    <div class="inner-text">
+                        <h4>Gấu Teedy</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="single-banner">
+                    <img src="https://cdn.nhanh.vn/cdn/store/3946/ps/20170818/thu_bong_nhim_thumb_600x398.jpg" alt="">
+                    <div class="inner-text">
+                        <h4>Thú bông</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="single-banner">
+                    <img src="https://cdn.nhanh.vn/cdn/store/3946/ps/20191231/img_0942_thumb.jpg" alt="">
+                    <div class="inner-text">
+                        <h4>Gối bông</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Banner Section End -->
+<!-- Women Banner Section Begin -->
+<section class="women-banner spad">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-3">
+                <div class="product-large set-bg" data-setbg="https://cdn.nhanh.vn/cdn/store/3946/ps/20190910/img_4545.jpg">
+                    <h2>Thú bông</h2>
+                    <a href="#">Tìm hiểu</a>
+                </div>
+            </div>
+            <div class="col-lg-8 offset-lg-1">
+                <div class="filter-control">
+                    <ul>
+                        <li class="active" data-filter="T-1">Heo bông</li>
+                        <li data-filter="T-2">Thỏ bông</li>
+                        <li data-filter="T-3">Chó bông</li>
+                        <li data-filter="T-4">Mèo bông</li>
+                    </ul>
+                </div>
+                <div class="product-slider owl-carousel">
+                    @foreach (var item in @ViewData["animal"] as List<SubProducts>)
+                    {
+                        <div class="product-item" data-proid="@item.id">
+                            <div class="pi-pic">
+                                <img src="@item.img" alt="">
+                                <div class="sale">Giảm giá 10%</div>
+                                <div class="icon">
+                                    <i class="icon_heart_alt"></i>
+                                </div>
+                                <ul>
+                                    <li class="w-icon"><a href="#"><i class="icon_bag_alt"></i></a></li>
+                                    <li class="quick-view"><a href="@item.link">+ Chi tiết</a></li>
+                                    <li class="w-icon"><a><i class="fa fa-random"></i></a></li>
+                                </ul>
+                            </div>
+                            <div class="pi-text">
+                                <div class="catagory-name">@item.type</div>
+                                <a href="#">
+                                    <h5>@item.name</h5>
+                                </a>
+                                <div class="product-price">
+                                    @item.discount
+                                    <span>@item.price vnđ</span>
+                                </div>
+                            </div>
+                        </div>
+                    }
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Women Banner Section End -->
+<!-- Deal Of The Week Section Begin-->
+<section class="deal-of-week set-bg spad" data-setbg="https://cdn.nhanh.vn/cdn/store/3946/bn/sb_1549710903_84.jpg">
+    <div class="container">
+        <div class="col-lg-6 text-center">
+            <div class="section-title">
+                <h2>Săn Gấu độc lạ hàng tuần</h2>
+                <p>
+                    Săn nhưng chú gấu độc lạ, đầy mê hoặc<br /> thỏa niềm đam mê sưu tập. Ring gấu về dinh !!!
+                </p>
+                <div class="product-price">
+                    100.000 ~200.000vnđ
+                    <span>/ Đơn</span>
+                </div>
+            </div>
+            <div class="countdown-timer" id="countdown">
+                <div class="cd-item">
+                    <span>56</span>
+                    <p>Days</p>
+                </div>
+                <div class="cd-item">
+                    <span>12</span>
+                    <p>Hrs</p>
+                </div>
+                <div class="cd-item">
+                    <span>40</span>
+                    <p>Mins</p>
+                </div>
+                <div class="cd-item">
+                    <span>52</span>
+                    <p>Secs</p>
+                </div>
+            </div>
+            <a href="#" class="primary-btn">Xem ngay</a>
+        </div>
+    </div>
+</section>
+<!-- Deal Of The Week Section End -->
+<!-- Man Banner Section Begin -->
+<section class="man-banner spad">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="filter-control">
+                    <ul>
+                        <li class="active" data-filter="G-1">Gấu teddy trơn</li>
+                        <li data-filter="G-2">Gấu teddy áo len</li>
+                        <li data-filter="G-3">Gấu teddy ôm tim</li>
+                    </ul>
+                </div>
+                <div class="product-slider owl-carousel">
+                    @foreach (var item in @ViewData["teddyPro"] as List<SubProducts>)
+                    {
+                        <div class="product-item" data-proID="@item.id">
+                            <div class="pi-pic">
+                                <img src="@item.img" alt="">
+                                <div class="sale">Giảm giá 10%</div>
+                                <div class="icon">
+                                    <i class="icon_heart_alt"></i>
+                                </div>
+                                <ul>
+                                    <li class="w-icon"><a href="#"><i class="icon_bag_alt"></i></a></li>
+                                    <li class="quick-view"><a href="@item.link">+ Chi tiết</a></li>
+                                    <li class="w-icon"><a><i class="fa fa-random"></i></a></li>
+                                </ul>
+                            </div>
+                            <div class="pi-text">
+                                <div class="catagory-name">@item.type</div>
+                                <a href="#">
+                                    <h5>@item.name</h5>
+                                </a>
+                                <div class="product-price">
+                                    @item.discount
+                                    <span>@item.price vnđ</span>
+                                </div>
+                            </div>
+                        </div>
+                    }
+
+
+                </div>
+            </div>
+            <div class="col-lg-3 offset-lg-1">
+                <div class="product-large set-bg m-large" data-setbg="https://cdn.nhanh.vn/cdn/store/3946/ps/20200107/o1cn010uyzmy1vq4f5nsvys___0_item_pic.gif">
+                    <h2>Gấu Teddy</h2>
+                    <a href="#">Tìm hiểu</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Man Banner Section End -->
+<!-- Instagram Section Begin -->
+<div class="instagram-photo">
+    <div class="insta-item set-bg" data-setbg="https://cdn.nhanh.vn/cdn/store/3946/ps/20180202/gau_teddy__1__638x960_thumb_399x600.jpg">
+        <div class="inside-text">
+            <i class="ti-instagram"></i>
+            <h5><a href="#">Bộ sưu tập gấu</a></h5>
+        </div>
+    </div>
+    <div class="insta-item set-bg" data-setbg="https://cdn.nhanh.vn/cdn/store/3946/ps/20180818/csc_0060_copy_1000x1000.jpeg">
+        <div class="inside-text">
+            <i class="ti-instagram"></i>
+            <h5><a href="#">Bộ sưu tập mèo</a></h5>
+        </div>
+    </div>
+    <div class="insta-item set-bg" data-setbg="https://cdn.nhanh.vn/cdn/store/3946/ps/20190819/img_2939.jpg">
+        <div class="inside-text">
+            <i class="ti-instagram"></i>
+            <h5><a href="#">Bộ sưu tập chó</a></h5>
+        </div>
+    </div>
+    <div class="insta-item set-bg" data-setbg="https://cdn.nhanh.vn/cdn/store/3946/ps/20190819/img_3228.jpg">
+        <div class="inside-text">
+            <i class="ti-instagram"></i>
+            <h5><a href="#">Bộ sưu tập heo</a></h5>
+        </div>
+    </div>
+    <div class="insta-item set-bg" data-setbg="https://cdn.nhanh.vn/cdn/store/3946/ps/20190209/csc_0035_copy_800x1000.jpg">
+        <div class="inside-text">
+            <i class="ti-instagram"></i>
+            <h5><a href="#">Bộ sưu tập gấu</a></h5>
+        </div>
+    </div>
+    <div class="insta-item set-bg" data-setbg="https://cdn.nhanh.vn/cdn/store/3946/ps/20180726/csc_0073_copy_compressed_1000x1000.jpg">
+        <div class="inside-text">
+            <i class="ti-instagram"></i>
+            <h5><a href="#">Bộ sưu tập thỏ</a></h5>
+        </div>
+    </div>
+</div>
+<!-- Instagram Section End -->
+<!-- Latest Blog Section Begin -->
+<section class="latest-blog spad">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="section-title">
+                    <h2>Blog thú bông</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 col-md-6">
+                <div class="single-latest-blog">
+                    <img src="https://cdn.nhanh.vn/cdn/store/3946/ps/20200229/927587c6bc5f44011d4e_thumb.jpg" alt="">
+                    <div class="latest-text">
+                        <div class="tag-list">
+                            <div class="tag-item">
+                                <i class="fa fa-calendar-o"></i>
+                                May 4,2019
+                            </div>
+                            <div class="tag-item">
+                                <i class="fa fa-comment-o"></i>
+                                5
+                            </div>
+                        </div>
+                        <a href="#">
+                            <h4>MUA GẤU BÔNG SIZE LỚN GIÁ RẺ Ở ĐÂU TẠI TP HỒ CHÍ MINH ?</h4>
+                        </a>
+                        <p>Mua gấu bông teddy size lớn để làm quà tặng cho bạn bè và người thân là một trong những ngày lễ hay ngày sinh nhật là một trong những việc làm vô cùng hiệu quả nếu bạn muốn mang nụ cười đến cho người mà bạn yêu thương ! Tại TP.HCM , khi tìm … </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="single-latest-blog">
+                    <img src="https://cdn.nhanh.vn/cdn/store/3946/ps/20170617/img_9244_thumb_600x398.jpg" alt="">
+                    <div class="latest-text">
+                        <div class="tag-list">
+                            <div class="tag-item">
+                                <i class="fa fa-calendar-o"></i>
+                                May 4,2019
+                            </div>
+                            <div class="tag-item">
+                                <i class="fa fa-comment-o"></i>
+                                5
+                            </div>
+                        </div>
+                        <a href="#">
+                            <h4>NHỮNG MẪU GẤU BÔNG MẶC ÁO LEN ĐẸP GIÁ RẺ TẠI TP.HCM</h4>
+                        </a>
+                        <p>Gấu bông teddy mặc áo len là những mẫu quà tặng cực kỳ dễ thương và đáng yêu nhất để làm quà tặng cho người bạn yêu thương ! Có rất nhiều mẫu gấu bông áo len đẹp bán chạy tại TP. Hồ Chí Minh , bạn có thể mua được những mẫu gấu bông …</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="single-latest-blog">
+                    <img src="https://cdn.nhanh.vn/cdn/store/3946/ps/20170318/img_8147_thumb_575x599.jpg" alt="">
+                    <div class="latest-text">
+                        <div class="tag-list">
+                            <div class="tag-item">
+                                <i class="fa fa-calendar-o"></i>
+                                May 4,2019
+                            </div>
+                            <div class="tag-item">
+                                <i class="fa fa-comment-o"></i>
+                                5
+                            </div>
+                        </div>
+                        <a href="#">
+                            <h4>NHỮNG MẪU GẤU BÔNG TEDDY SIZE NHỎ DỄ THƯƠNG</h4>
+                        </a>
+                        <p>Những mẫu gấu bông size nhỏ là một trong những món quà tặng sinh nhật cực kỳ đáng yêu mà bạn có thể tìm kiếm ở bất cứ nơi đâu tại TP.HCM ! ...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="benefit-items">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="single-benefit">
+                        <div class="sb-icon">
+                            <img src="@Url.Content("~/Asset/img/")icon-1.png" alt="">
+                        </div>
+                        <div class="sb-text">
+                            <h6>Vận chuyển miễn phí</h6>
+                            <p>Cho tất cả các đơn trên 200.000đ</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="single-benefit">
+                        <div class="sb-icon">
+                            <img src="@Url.Content("~/Asset/img/")icon-2.png" alt="">
+                        </div>
+                        <div class="sb-text">
+                            <h6>Đổi trả hàng</h6>
+                            <p>Hàng bị lỗi, không đúng quy cách</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="single-benefit">
+                        <div class="sb-icon">
+                            <img src="@Url.Content("~/Asset/img/")icon-3.png" alt="">
+                        </div>
+                        <div class="sb-text">
+                            <h6>Bảo mật giao dịch</h6>
+                            <p>100% an toàn</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Latest Blog Section End -->
+
+@section Scripts{
+
+        <script>
+            function remove_all_item(productSlider) {
+
+                var len = productSlider.find(".product-item").length;
+                for (var i=0; i<len; i++) {
+                       productSlider.trigger('remove.owl.carousel', [i])
+                                                 .trigger('refresh.owl.carousel');
+                }
+      
+            }
+            function reload_slider(filter,productSlider) {
+                remove_all_item(productSlider);
+                var owl = productSlider;
+		            $.ajax({
+                        url: "@Url.Action("productsChange")",
+                        method: "POST",
+                        data: { "filter" : filter},
+		                dataType: 'json',
+		                success: function(data) {
+		             
+		                $.each(data, function(k, v) {
+		
+                            owl.trigger('add.owl.carousel', [jQuery('<div class="product-item" data-proID="'+v.id+'">\
+                            <div class="pi-pic">\
+                                <img src="'+v.img+'" alt="">\
+                                <div class="sale">Giảm giá 10%</div>\
+                                <div class="icon">\
+                                    <i class="icon_heart_alt"></i>\
+                                </div>\
+                                <ul>\
+                                    <li class="w-icon"><a href="#"><i class="icon_bag_alt"></i></a></li>\
+                                    <li class="quick-view"><a href="'+v.link+'">+ Chi tiết</a></li>\
+                                    <li class="w-icon"><a><i class="fa fa-random"></i></a></li>\
+                                </ul>\
+                            </div>\
+                            <div class="pi-text">\
+                                <div class="catagory-name">'+v.type+'</div>\
+                                <a href="#">\
+                                    <h5>'+v.name+'</h5>\
+                                </a>\
+                                <div class="product-price">\
+                                    '+v.discount+'\
+                                    <span>'+v.price+' vnđ</span>\
+                                </div>\
+                            </div>\
+                        </div>')]);
+			            });
+			            owl.trigger('refresh.owl.carousel');
+		              },
+                        timeout: 120000,
+                        error: function(jqXHR, textStatus, errorThrown) {
+                            console.log(textStatus);
+                        }
+		            });
+            }
+            
+            $(document).ready(function () {
+                $(".filter-control>ul").on("click", "li", function () {
+                    
+                    $(this).closest(".filter-control").find("li").removeClass("active");
+                    $(this).addClass("active");
+                    var productSlider = $(this).closest(".col-lg-8").find(".product-slider");
+                   
+                    var filter = $(this).data("filter");
+                    reload_slider(filter, productSlider);
+                   
+                })// end click 
+
+                // add to cart
+                $(".product-item").on("click", "ul li:nth-child(1)", function () {
+                    var id = $(this).closest(".product-item").data("proid");
+                    $(this).addClass("active");
+                    addToCart(id);
+                })
+            })// end document.ready
+        </script>
+}
